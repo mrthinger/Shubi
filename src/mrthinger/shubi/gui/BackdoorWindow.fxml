@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mrthinger.shubi.gui.BackdoorController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ListView fx:id="bdListView" layoutX="16.0" layoutY="16.0" onMouseClicked="#bdListViewOnClick" prefHeight="343.0" prefWidth="288.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <HBox spacing="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateOnClick" prefWidth="65.0" text="Update" />
+                  <Button fx:id="inspectButton" mnemonicParsing="false" onAction="#inspectOnClick" prefWidth="65.0" text="Inspect" />
+               </children>
+            </HBox>
+            <Button fx:id="createButton" layoutX="234.0" layoutY="366.0" mnemonicParsing="false" onAction="#createOnClick" prefWidth="65.0" text="Create" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="4.0" top="8.0" />
+         </padding>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="8.0" left="4.0" right="8.0" top="8.0" />
+         </padding>
+         <children>
+            <VBox fx:id="bdInfoBox" spacing="4.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox spacing="4.0">
+                     <children>
+                        <Label text="Site:" />
+                        <Label fx:id="siteValueLabel" text="siteValue" />
+                     </children>
+                  </HBox>
+                  <Label text="Shoe Name Binding:" />
+                  <TextField fx:id="shoeBindingTF" />
+                  <VBox fx:id="captchaSettingsBox" spacing="4.0">
+                     <children>
+                        <Label text="Captcha:" />
+                        <HBox alignment="CENTER_LEFT" spacing="4.0">
+                           <children>
+                              <Label text="    Banking:" />
+                              <Label fx:id="bankEnabledLabel" text="bankEnabledV" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="4.0">
+                           <children>
+                              <Label text="    SiteKey:" />
+                              <Label fx:id="siteKeyLabel" text="sitekeyV" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="4.0">
+                           <children>
+                              <Label text="    Bankers:" />
+                              <Label fx:id="numBankersLabel" text="bankersV" />
+                              <Label text="Banked:" />
+                              <Label fx:id="bankedLabel" text="bankedV" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="4.0">
+                           <children>
+                              <TextField fx:id="constantTF" prefHeight="27.0" prefWidth="56.0" promptText="0" />
+                              <RadioButton fx:id="constantRadio" mnemonicParsing="false" text="Constant" />
+                              <RadioButton fx:id="autoRadio" contentDisplay="TOP" mnemonicParsing="false" onAction="#autoRadioOnClick" text="Auto" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="4.0">
+                           <children>
+                              <Button fx:id="captchaStartButton" mnemonicParsing="false" onAction="#captchaStartOnClick" prefWidth="90.0" text="Start" />
+                              <Button fx:id="captchaStopButton" mnemonicParsing="false" onAction="#captchaStopOnClick" prefWidth="90.0" text="Stop" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <Button fx:id="saveButton" layoutX="233.0" layoutY="357.0" mnemonicParsing="false" onAction="#saveOnClick" prefWidth="65.0" text="Save" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="applyButton" layoutX="112.0" layoutY="385.0" mnemonicParsing="false" onAction="#applyOnClick" prefWidth="65.0" text="Apply" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="69.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

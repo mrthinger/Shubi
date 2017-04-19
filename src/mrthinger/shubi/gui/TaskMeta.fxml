@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mrthinger.shubi.gui.MetaController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="14.0" text="Task Metadata" textAlignment="CENTER" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="12.0" layoutY="61.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="73.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="211.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label contentDisplay="TOP" text="Shoe:">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label text="Site:" GridPane.rowIndex="1" />
+            <Label text="Status:" GridPane.rowIndex="7" />
+            <Label text="Remaining:" GridPane.rowIndex="3" />
+            <Label text="Size:" GridPane.rowIndex="4" />
+            <Label text="Account:" GridPane.rowIndex="5" />
+            <Label text="Link:" GridPane.rowIndex="6" />
+            <Label text="Proxy:" GridPane.rowIndex="2" />
+            <Label fx:id="shoeLabel" GridPane.columnIndex="1" />
+            <Label fx:id="siteLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="proxyLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="remainingLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="sizeLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="accountLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="linkLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="statusLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         </children>
+         <VBox.margin>
+            <Insets left="4.0" top="2.0" />
+         </VBox.margin>
+      </GridPane>
+      <Label fx:id="selectStatusLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="374.0" text="Select a new Task from the Table" AnchorPane.topAnchor="335.0" />
+      <HBox alignment="CENTER" layoutX="62.0" layoutY="315.0" spacing="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="selectButton" mnemonicParsing="false" onAction="#selectOnClick" text="Select" />
+            <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeOnClick" prefWidth="57.0" text="Close" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mrthinger.shubi.gui.SettingsController">
+   <children>
+      <TabPane tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Task">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox spacing="4.0">
+                           <children>
+                              <Label text="Tasks Per Proxy" />
+                              <TextField fx:id="tasksPerProxyTF" />
+                              <Label text="Max ATC Failures (Adidas Only)" />
+                              <TextField fx:id="maxFailTF" />
+                              <Label text="Default Adidas US SiteKey" />
+                              <TextField fx:id="adcUSSiteKeyTF" />
+                              <Label text="Default Adidas UK SiteKey" />
+                              <TextField fx:id="adcUKSiteKeyTF" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Captcha">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox spacing="4.0">
+                           <children>
+                              <Label text="2Captcha Key" />
+                              <TextField fx:id="twoCaptchaTF" />
+                              <Label text="Captcha Timeout (Mins)" />
+                              <TextField fx:id="captchaTimeoutTF" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="125.0" layoutY="6.0" text="Settings" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0" />
+      <HBox spacing="4.0" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0">
+         <children>
+            <Button fx:id="applyButton" mnemonicParsing="false" onAction="#applyOnClick" text="Apply" />
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveOnClick" text="Save" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

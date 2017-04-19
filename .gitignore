@@ -1,0 +1,6 @@
+/target/
+/.project
+/.DS_Store
+/.classpath
+/dependency-reduced-pom.xml
+/todo

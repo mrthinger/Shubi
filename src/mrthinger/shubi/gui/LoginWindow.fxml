@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" maxHeight="65.0" maxWidth="308.0" minHeight="65.0" minWidth="308.0" prefHeight="65.0" prefWidth="308.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mrthinger.shubi.gui.LoginController">
+   <children>
+      <VBox spacing="5.0">
+         <children>
+            <HBox spacing="4.0">
+               <children>
+                  <TextField fx:id="keyTextField" onKeyPressed="#onKeyFieldKeyPressed" prefHeight="27.0" prefWidth="236.0" promptText="Key" />
+                  <Button fx:id="loginButton" mnemonicParsing="false" onAction="#onLoginClicked" text="Login" />
+               </children>
+            </HBox>
+            <Label fx:id="statusLabel" alignment="BOTTOM_CENTER" text="Status:" textAlignment="CENTER" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

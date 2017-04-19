@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" minHeight="300.0" minWidth="600.0" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mrthinger.shubi.gui.ProxyController">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <children>
+      <VBox layoutX="24.0" layoutY="24.0" prefHeight="347.0" prefWidth="260.0" spacing="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Untested Proxies:" />
+            <ListView fx:id="untestedProxyList" VBox.vgrow="ALWAYS" />
+            <HBox maxHeight="-Infinity" prefHeight="58.0" spacing="4.0" VBox.vgrow="NEVER">
+               <children>
+                  <VBox spacing="4.0" HBox.hgrow="NEVER">
+                     <children>
+                        <Button fx:id="loadFileButton" mnemonicParsing="false" onAction="#loadFileOnClick" prefHeight="27.0" prefWidth="300.0" text="Load File" />
+                        <Button fx:id="loadMppButton" mnemonicParsing="false" onAction="#loadMppOnClick" prefHeight="27.0" prefWidth="300.0" text="Load MPP Key" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="4.0">
+                     <children>
+                        <Button fx:id="testSettingsButton" mnemonicParsing="false" onAction="#testSettingsOnClick" prefHeight="27.0" prefWidth="300.0" text="Test Settings" />
+                        <Button fx:id="testButton" mnemonicParsing="false" onAction="#testOnClick" prefHeight="27.0" prefWidth="300.0" text="Test" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="486.0" layoutY="16.0" prefHeight="384.0" prefWidth="267.0" spacing="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Tested Proxies:" />
+            <TableView fx:id="testedProxyTable" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="proxyIpColumn" prefWidth="120.0" text="Proxy IP" />
+              </columns>
+            </TableView>
+            <AnchorPane maxHeight="-Infinity" prefHeight="58.0">
+               <children>
+                  <ProgressBar fx:id="progressBar" layoutY="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" progress="0.0" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="247.0" AnchorPane.topAnchor="0.0" />
+                  <VBox alignment="CENTER_LEFT" layoutX="178.0" layoutY="9.0" nodeOrientation="LEFT_TO_RIGHT" spacing="4.0" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="134.0" AnchorPane.topAnchor="9.0">
+                     <children>
+                        <CheckBox fx:id="useUntestedCheckbox" mnemonicParsing="false" text="Use Untested" />
+                        <CheckBox fx:id="useTestedCheckbox" mnemonicParsing="false" selected="true" text="Use Tested">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </CheckBox>
+                     </children>
+                  </VBox>
+                  <Button fx:id="submitButton" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#submitOnClick" prefHeight="58.0" prefWidth="128.0" text="Save" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="statusLabel" layoutX="7.0" layoutY="36.0" text="Status: " AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="36.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+</AnchorPane>
